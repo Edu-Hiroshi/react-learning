@@ -1,0 +1,12 @@
+header {
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+}
+
+.logo {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 25px;
+}
