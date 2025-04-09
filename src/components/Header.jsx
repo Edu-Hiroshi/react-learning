@@ -4,10 +4,10 @@ import './Header.css';
 export default function Header() {
   return (
     <header>
-      <Link className="logo" to="/">MANGA list</Link>
+      <Link className="logo" to="/">BOOK archive</Link>
       <nav>
-        <Link to="/about">About</Link>
-        <Link to="/vans">Manga list</Link>
+        <Link className="links" to="/about">About</Link>
+        <Link className="links" to="/books">Book list</Link>
       </nav>
     </header>
   )

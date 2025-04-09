@@ -1,12 +1,21 @@
 header {
-  height: 110px;
+  color: rgb(255, 255, 255);
+  height: 50px;
   display: flex;
   align-items: center;
-  padding-block: 10px;
+  background-color: rgb(109, 109, 109);
+  border-bottom: solid;
+  border-color: rgb(48, 48, 48);
+  border-width: 1px;
 }
 
 .logo {
   margin-right: auto;
   font-weight: 700;
   font-size: 25px;
+  padding: 10px;
+}
+
+.links {
+  padding: 10px;
 }

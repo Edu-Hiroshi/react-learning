@@ -3,6 +3,10 @@ import './Home.css';
 
 export default function Home () {
   return (
-    <div className="home-container">TEST HOME</div>
+    <div className="home-container">
+      <h1> Welcome to the home screen </h1>
+      <div> Dummy text </div>
+    </div>
+    
   )
 }

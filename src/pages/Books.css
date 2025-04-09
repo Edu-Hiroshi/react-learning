@@ -1,0 +1,17 @@
+.book-list-container {
+  padding-inline: 20px;
+  margin-top: 20px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: rgb(100,100,100);
+}
+
+.book-cell {
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(200, 200, 200);
+}
