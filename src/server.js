@@ -35,7 +35,7 @@ createServer({
     this.get("/dashboard/reading/:id", (schema, request) => {
       // readingID hard coded
       const id = request.params.id
-      return schema.books.where({id,  readingId: "1"})
+      return schema.books.findBy({id,  readingId: "1"})
     })
   }
 })
