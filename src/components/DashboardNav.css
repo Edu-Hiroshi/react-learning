@@ -1,0 +1,16 @@
+.dashboard-nav {
+  display: flex;
+}
+
+.dashboard-nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 25px;
+}
+
+.dashboard-nav a:hover {
+  text-decoration: underline;
+  color: rgb(100, 100, 100);
+  font-weight: 600;
+}

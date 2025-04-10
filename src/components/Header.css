@@ -9,6 +9,11 @@ header {
   border-width: 1px;
 }
 
+header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
 .logo {
   margin-right: auto;
   font-weight: 700;
