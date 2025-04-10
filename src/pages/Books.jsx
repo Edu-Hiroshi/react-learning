@@ -1,4 +1,6 @@
-import React from 'react'
+import React from "react";
+import {Link} from "react-router";
+
 import './Books.css';
 
 export default function Books() {
@@ -10,17 +12,17 @@ export default function Books() {
       .then(data => setBooks(data.books))
   }, [])
 
-  console.log(books)
-
   const bookElements = books.map(book => (
     <div key={book.id} className="book-cell">
-      <div className="book-info">
-        <h3>{book.name}</h3>
-        <p>R${book.price}</p>
-      </div>
-      <i className={`book-type ${book.type} selected`}>
-        {book.type}
-      </i>
+      <Link to={`/books/${book.id}`}>
+        <div className="book-info">
+          <h3>{book.name}</h3>
+          <p>R${book.price}</p>
+        </div>
+        <i className={`book-type ${book.type} selected`}>
+          {book.type}
+        </i>
+      </Link>
     </div>
   ))
 
