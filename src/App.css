@@ -2,3 +2,10 @@ body {
   font-family: Roboto, Arial;
   margin: 0px;
 }
+
+.back-button {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 8px 25px;
+}

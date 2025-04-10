@@ -11,34 +11,33 @@ export default function DashboardNav() {
   }
   
   // end é usado para evitar que haja um highlight em dashboard (devido ao nesting de dashboard)
-
   return (
     <>
       <nav className="dashboard-nav">
         <NavLink 
           end
-          to="/dashboard"
+          to="."
           style={({isActive}) => isActive ? activeStyles : null}
         >
           Dashboard
         </NavLink>
 
         <NavLink 
-          to="/dashboard/details"
+          to="tags"
           style={({isActive}) => isActive ? activeStyles : null}
         >
-          Details
+          Tags
         </NavLink>
 
         <NavLink 
-          to="/dashboard/reading"
+          to="reading"
           style={({isActive}) => isActive ? activeStyles : null}
         >
           Reading
         </NavLink>
 
         <NavLink 
-          to="/dashboard/reviews"
+          to="reviews"
           style={({isActive}) => isActive ? activeStyles : null}
         >
           Reviews
