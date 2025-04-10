@@ -9,8 +9,20 @@ header {
   border-width: 1px;
 }
 
+a.active-link {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #9adb80;
+}
+
 header a {
   text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+
+header a:hover {
+  text-decoration: underline;
   color: rgb(255, 255, 255);
 }
 
@@ -18,9 +30,5 @@ header a {
   margin-right: auto;
   font-weight: 700;
   font-size: 25px;
-  padding: 10px;
-}
-
-.links {
   padding: 10px;
 }
