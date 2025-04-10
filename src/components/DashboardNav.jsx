@@ -31,6 +31,13 @@ export default function DashboardNav() {
         </NavLink>
 
         <NavLink 
+          to="/dashboard/reading"
+          style={({isActive}) => isActive ? activeStyles : null}
+        >
+          Reading
+        </NavLink>
+
+        <NavLink 
           to="/dashboard/reviews"
           style={({isActive}) => isActive ? activeStyles : null}
         >

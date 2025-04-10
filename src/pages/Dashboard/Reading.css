@@ -1,0 +1,25 @@
+.dashboard-book-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  background-color: rgb(100,100,100);
+}
+
+.dashboard-book-cell {
+  padding: 10px 10px 10px 10px;
+  background-color: rgb(200, 200, 200);
+}
+
+.dashboard-book-info {
+  color: rgb(100,100,100);
+}
+
+.dashboard-book-type {
+  height: 35px;
+  padding: 6px 26px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(100,100,100);
+  color: white;
+}

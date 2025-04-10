@@ -8,15 +8,17 @@ import {
 import "./App.css";
 import "./server.js";
 
-import Layout       from "./components/Layout";
-import Home         from "./pages/Home";
-import About        from "./pages/About";
-import Books        from "./pages/Books/Books.jsx";
-import BookDetail   from "./pages/Books/BookDetail.jsx";
-import DashboardNav from "./components/DashboardNav.jsx";
-import Dashboard    from "./pages/Dashboard/Dashboard.jsx";
-import Details      from "./pages/Dashboard/Details.jsx";
-import Reviews      from "./pages/Dashboard/Reviews.jsx";
+import Layout        from "./components/Layout";
+import Home          from "./pages/Home";
+import About         from "./pages/About";
+import Books         from "./pages/Books/Books.jsx";
+import BookDetail    from "./pages/Books/BookDetail.jsx";
+import DashboardNav  from "./components/DashboardNav.jsx";
+import Dashboard     from "./pages/Dashboard/Dashboard.jsx";
+import Details       from "./pages/Dashboard/Details.jsx";
+import Reading       from "./pages/Dashboard/Reading.jsx";
+import ReadingDetail from "./pages/Dashboard/ReadingDetail.jsx";
+import Reviews       from "./pages/Dashboard/Reviews.jsx";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
             <Route path="dashboard" element={<DashboardNav />}>
               <Route index element={<Dashboard />} />
               <Route path="details" element={<Details />} />
+              <Route path="reading" element={<Reading />} />
+              <Route path="reading/:id" element={<ReadingDetail />} />
               <Route path="reviews" element={<Reviews />} />
             </Route>
           </Route>
