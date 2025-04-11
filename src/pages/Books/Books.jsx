@@ -2,16 +2,31 @@ import React from "react";
 import { Link, useSearchParams } from "react-router";
 
 import './Books.css';
+import { getBooks } from "../../api"
 
 export default function Books() {
   const [searchParams, setSearchParams] = useSearchParams()
   const typeFilter = searchParams.get("type")
   const [books, setBooks] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
 
   React.useEffect (() => {
-    fetch("/api/books")
-      .then(res => res.json())
-      .then(data => setBooks(data.books))
+    async function loadBooks() {
+      setLoading(true)
+      try {
+        const data = await getBooks()
+        setBooks(data)
+      }
+      catch (err) {
+        setError(err)
+      }
+      finally {
+        setLoading(false)
+      }
+    }
+
+    loadBooks()
   }, [])
 
   const displayedBooks = typeFilter ? books.filter(book => book.type === typeFilter) : books
@@ -36,6 +51,14 @@ export default function Books() {
       </Link>
     </div>
   ))
+
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+
+  if (error) {
+    return <h1>Error: {error.message}</h1>
+  }
 
   return (
     <div className="book-list-container">

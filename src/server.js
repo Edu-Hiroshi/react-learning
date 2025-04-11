@@ -1,4 +1,4 @@
-import { createServer, Model } from "miragejs";
+import { createServer, Model, Response } from "miragejs";
 
 createServer({
   models: {
@@ -17,9 +17,12 @@ createServer({
 
   routes() {
     this.namespace = "api"
+    this.logging = false
+    this.timing = 250
 
     this.get("/books", (schema, request) => {
       return schema.books.all()
+      return new Response(400, {}, {error: "Hardcoded data fetch error"})
     })
 
     this.get("/books/:id", (schema, request) => {
