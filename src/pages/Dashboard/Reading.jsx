@@ -12,10 +12,7 @@ export default function Reading() {
   }, [])
   
   const dashboardBooksElements = books.map(book => (
-    <Link
-      to={`/dashboard/reading/${book.id}`}
-      key={book.id}
-    >
+    <Link to={book.id} key={book.id}>
       <div
         className="dashboard-book-cell"
         key={book.id}
@@ -33,7 +30,7 @@ export default function Reading() {
   
   return (
     <section>
-      <h1>Currently reading</h1>
+      <h1>Currently reading list:</h1>
         <div className="dashboard-book-list">
           {
             books.length > 0 ? (

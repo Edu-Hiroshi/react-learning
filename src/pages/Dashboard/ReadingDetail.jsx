@@ -1,5 +1,10 @@
 import React from "react";
-import { useParams, Link, NavLink, Outlet } from "react-router";
+import {
+  useParams,
+  Link,
+  NavLink,
+  Outlet
+} from "react-router";
 
 import "./ReadingDetail.css";
 

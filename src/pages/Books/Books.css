@@ -28,3 +28,44 @@
   background-color: rgb(100,100,100);
   color: white;
 }
+
+.book-type:hover {
+  color: #ffffff;
+}
+
+.book-type:focus {
+  outline: none;
+}
+
+.book-type.selected {
+  color: #ffffff;
+}
+
+.book-type.shounen:hover, .book-type.shounen.selected {
+  background-color: #568cd3;
+}
+
+.book-type.shoujo:hover, .book-type.shoujo.selected {
+  background-color: #e78fe0;
+}
+
+.book-type.seinen:hover, .book-type.seinen.selected {
+  background-color: #62c96f;
+}
+
+.book-type.american:hover, .book-type.american.selected {
+  background-color: #e15454;
+}
+
+.book-type.clear-filters {
+  margin-left: -5px;
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #4D4D4D;
+}
