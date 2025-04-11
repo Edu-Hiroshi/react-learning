@@ -22,6 +22,7 @@ import ReadingDetail  from "./pages/Dashboard/ReadingDetail.jsx";
 import ReadingInfo    from "./pages/Dashboard/ReadingInfo.jsx";
 import ReadingPricing from "./pages/Dashboard/ReadingPricing.jsx";
 import ReadingPhotos  from "./pages/Dashboard/ReadingPhotos.jsx";
+import NotFound       from "./pages/NotFound.jsx";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
                 <Route path="photos" element={<ReadingPhotos/>}/>
               </Route>
             </Route>
+
+            <Route path="*" element={<NotFound/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
