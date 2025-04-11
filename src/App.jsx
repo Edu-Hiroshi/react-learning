@@ -1,7 +1,8 @@
 import React from "react";
 import {
-  BrowserRouter,
-  Routes,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
   Route
 } from "react-router";
 
@@ -24,36 +25,34 @@ import ReadingPricing from "./pages/Dashboard/ReadingPricing.jsx";
 import ReadingPhotos  from "./pages/Dashboard/ReadingPhotos.jsx";
 import NotFound       from "./pages/NotFound.jsx";
 
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Layout/>}>
+    <Route index element={<Home/>} />
+    <Route path="about" element={<About/>}/>
+
+    <Route path="books" element={<Books/>}/>
+    <Route path="books/:id" element={<BookDetail/>}/>
+
+    <Route path="dashboard" element={<DashboardNav/>}>
+      <Route index element={<Dashboard/>}/>
+      <Route path="tags" element={<Tags/>}/>
+      <Route path="reviews" element={<Reviews/>}/>
+      <Route path="reading" element={<Reading/>}/>
+      
+      <Route path="reading/:id" element={<ReadingDetail/>}>
+        <Route index element={<ReadingInfo/>}/>
+        <Route path="pricing" element={<ReadingPricing/>}/>
+        <Route path="photos" element={<ReadingPhotos/>}/>
+      </Route>
+    </Route>
+
+    <Route path="*" element={<NotFound/>}/>
+  </Route>
+))
+
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route index element={<Home/>} />
-            <Route path="about" element={<About/>}/>
-
-            <Route path="books" element={<Books/>}/>
-            <Route path="books/:id" element={<BookDetail/>}/>
-
-            <Route path="dashboard" element={<DashboardNav/>}>
-              <Route index element={<Dashboard/>}/>
-              <Route path="tags" element={<Tags/>}/>
-              <Route path="reviews" element={<Reviews/>}/>
-              <Route path="reading" element={<Reading/>}/>
-              
-              <Route path="reading/:id" element={<ReadingDetail/>}>
-                <Route index element={<ReadingInfo/>}/>
-                <Route path="pricing" element={<ReadingPricing/>}/>
-                <Route path="photos" element={<ReadingPhotos/>}/>
-              </Route>
-            </Route>
-
-            <Route path="*" element={<NotFound/>}/>
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
