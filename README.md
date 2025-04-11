@@ -1,6 +1,10 @@
+# TODO:
+
+Aplicar CSS, adicionar auth/protected routes, adicionar error handling para diferentes requests.
+
 # REACT-LEARNING
 
-Projeto de aprendizado e revisão de React.
+Projeto de aprendizado e revisão de versões mais atualizadas do React e React Router 7.
 
 
 ## Developer setup
